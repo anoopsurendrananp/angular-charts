@@ -1,0 +1,15 @@
+<div style="height: 600px; width: 600px; text-align: center; margin-left: 160px; margin-top: 160px;">
+  <div style="display: block">
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [colors]="chartColors"
+            [options]="pieChartOptions"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+  <button class="btn btn-secondary" (click)="randomize()">Update</button>
+  <a class="anchor-tg" (click)="location.back()"> back </a>
+</div>

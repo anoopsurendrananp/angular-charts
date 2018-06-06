@@ -1,0 +1,30 @@
+<ng2-toasty [position]="'top-right'"></ng2-toasty>
+<div class="container mt-5" style="color:azure">
+  <div class="row">
+    <div class="col-md-6  mt-5 set-bgimage">
+      <form #loginForm="ngForm" novalidate (ngSubmit)="loginForm.valid && onLogin()">
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="inputEmail3" class="col-form-label">Email <span class="warn-text">*</span> </label>
+            <input type="text" class="form-control" [(ngModel)]="authData.email" name="email" #emp_mail="ngModel" placeholder="Email" required pattern="(.*\S.*)">
+            <small [hidden]="emp_mail.valid || (emp_mail.pristine && !loginForm.submitted)" class="warn-text">This field is required</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <label for="inputPassword3" class="col-form-label">Password <span class="warn-text">*</span> </label>
+            <input type="password" class="form-control" [(ngModel)]="authData.password" name="password" #emp_pswd="ngModel" placeholder="Password" required pattern="(.*\S.*)">
+            <small [hidden]="emp_pswd.valid || (emp_pswd.pristine && !loginForm.submitted)" class="warn-text">This field is required</small>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <button [disabled]="loginForm.invalid" type="submit" class="btn btn-danger">Sign in</button>
+            <label class="ml-5"> New user? <a class="anchor-tg" routerLink="/office/employee/create">register</a> here </label>
+            <a class="anchor-tg ml-5" routerLink="/office/employee/create">Lost password?</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

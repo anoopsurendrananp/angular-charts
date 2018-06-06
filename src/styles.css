@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+.anchor-tg {
+  text-decoration:  none;
+  /* font-weight: bold; */
+  color:#CF000F !important;
+} 
+
+.anchor-tg:hover {
+  text-decoration: underline !important;
+  font-style: italic;
+  color:#003171 !important;
+} 
+
+text.highcharts-credits {
+    display: none;
+}
+
+.set-bgimage {
+  background-image: url('assets/images/b-n-w.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.warn-text {
+  color: #CF000F;
+}
